@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personalized Image Generator</title>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=DM+Sans:wght@300;400;500&family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="bg-orbs">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+
+  <main class="container">
+    <header class="header">
+      <div class="header-eyebrow">Programming Club</div>
+      <h1 class="header-title">رسالة للتهنئة بالعيد</h1>
+      <p class="header-sub"></p>
+    </header>
+
+    <div class="card">
+
+      <section class="input-section">
+        <label class="input-label" for="nameInput">Your Name</label>
+        <div class="input-wrapper">
+          <input
+            type="text"
+            id="nameInput"
+            class="name-input"
+            
+            autocomplete="off"
+            maxlength="60"
+          />
+          <button class="reset-btn" id="resetBtn" title="Clear name" aria-label="Reset">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 6L6 18M6 6l12 12"/>
+            </svg>
+          </button>
+        </div>
+        <div class="char-count" id="charCount">0 / 60</div>
+        <div class="validation-msg" id="validationMsg">Please enter your name to download.</div>
+      </section>
+
+      <section class="preview-section">
+        <div class="preview-label">Live Preview</div>
+        <div class="canvas-wrapper">
+          <canvas id="previewCanvas"></canvas>
+          <div class="canvas-shimmer" id="canvasShimmer"></div>
+        </div>
+      </section>
+
+      <section class="actions-section">
+        <button class="download-btn" id="downloadBtn">
+          <span class="btn-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 5v14M5 12l7 7 7-7"/>
+            </svg>
+          </span>
+          <span class="btn-text">Download PNG</span>
+        </button>
+      </section>
+
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -294,7 +294,7 @@ function downloadImage(name) {
 ============================================================ */
 nameInput.addEventListener("input", () => {
   currentName = nameInput.value;
-  charCount.textContent = `${currentName.length} / 60`;
+  charCount.textContent = `${currentName.length} / 30`;
   validationMsg.classList.remove("visible");
   renderCanvas(currentName);
 });
@@ -328,7 +328,7 @@ downloadBtn.addEventListener("click", () => {
 resetBtn.addEventListener("click", () => {
   nameInput.value = "";
   currentName = "";
-  charCount.textContent = "0 / 60";
+  charCount.textContent = "0 / 30";
   validationMsg.classList.remove("visible");
   renderCanvas("");
   nameInput.focus();
